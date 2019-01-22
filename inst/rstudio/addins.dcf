@@ -1,0 +1,9 @@
+Name: 🌗 Switch RStudio Theme
+Description: Toggle RStudio Server Theme between Dark and Light
+Binding: switch_theme
+Interactive: false
+
+Name: Open User Guide
+Description: Opens the R Programming at the Urban Institute User Guide in your browser
+Binding: open_user_guide
+Interactive: false
