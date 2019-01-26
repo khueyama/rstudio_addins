@@ -3,7 +3,13 @@
 #' @description This RStudio Addin switches between Dark and Light
 #' @export
 switch_theme <- function() {
-  current_theme <- rstudioapi::getThemeInfo()
-  next_theme <- ifelse(current_theme$dark, "Chrome", "Vibrant Ink")
-  rstudioapi::applyTheme(next_theme)
+  if (rstudioapi::versionInfo()$version < "1.2.879") {
+    rstudioapi::showDialog("Error", 
+                           "This function requires RStudio v1.2.879 or higher.")
+  } else {
+    current_theme <- rstudioapi::getThemeInfo()
+    next_theme <- ifelse(current_theme$dark, "Chrome", "Idle Fingers")
+    rstudioapi::applyTheme(next_theme) 
+  }
+
 }
